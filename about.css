@@ -1,0 +1,146 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    background: rgb(24 67 81 / 90%);
+    padding: 16px 30px;
+    text-align: center;
+}
+.navlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items in a row */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically align items */
+}
+
+.navlist li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.navlist a {
+    text-decoration: none;
+    color: #fff; /* Default text color */
+ 
+    transition: color 0.3s ease-in-out;
+}
+
+.navlist a:hover {
+    color: #00bcd4; /* Hover effect */
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1c1c1c, #282828);
+    color: #fff;
+    padding: 40px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 900px;
+}
+
+
+
+/* Image Styling with Morphing Animation */
+.about-image img {
+    width: 140px; /* Adjust as needed */
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: morphing 5s infinite alternate ease-in-out;
+}
+
+/* Morphing Keyframes */
+@keyframes morphing {
+    0% {
+        border-radius: 50%;
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(3, 86, 97, 0.9);
+    }
+    50% {
+        border-radius: 40%;
+        transform: scale(1.1); /* Slight expansion */
+        box-shadow: 0 0 20px rgba(3, 90, 102, 0.9);
+    }
+    100% {
+        border-radius: 60%;
+        transform: scale(1); 
+        box-shadow: 0 0 15px rgba(3, 97, 109, 0.9);
+    }
+}
+
+
+
+.about-content h1 {
+    color: #0097a7;
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.social-icons {
+    margin: 15px 0;
+  
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-size: 30px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0097a7;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

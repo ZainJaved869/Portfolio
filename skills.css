@@ -1,0 +1,147 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1c1c1c, #282828);
+}
+
+
+/* Header */
+header {
+    background: rgb(24 67 81 / 90%);
+    padding: 16px 30px;
+    text-align: center;
+}
+.navlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items in a row */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically align items */
+}
+
+.navlist li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.navlist a {
+    text-decoration: none;
+    color: #fff; /* Default text color */
+ 
+    transition: color 0.3s ease-in-out;
+}
+
+.navlist a:hover {
+    color: #00bcd4; /* Hover effect */
+}
+/* Main Section Styling */
+#skills {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 50px 0;
+    object-fit: cover;
+}
+
+.main-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-text span {
+    font-size: 36px;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.main-text h2 {
+    font-size: 48px;
+    color: #fff;
+}
+
+/* Skill Bar Section */
+.skill-main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill-left {
+    width: 100%; /* Set width to 100% of the parent container */
+    max-width: 600px;
+}
+
+.skill-bar {
+    background: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-bar:hover {
+    transform: translateY(-10px);
+}
+
+.skill-bar .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-bar .circle {
+    background: #00bcd4;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.skill-bar .circle span {
+    font-size: 16px;
+    color: #fff;
+}
+
+.skill-bar p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .skill-bar {
+        width: 45%; /* Adjust to 45% for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-bar {
+        width: 70%; /* Adjust to 70% for smaller screens */
+    }
+
+    .skill-main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-bar {
+        width: 90%; /* Make skill bars take 90% width for very narrow screens */
+    }
+}

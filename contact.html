@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="navlist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="contact" class="contact">
+        <div class="main-text">
+            <span>Get in Touch</span>
+            <h2>Contact Me</h2>
+        </div>
+
+        <!-- Success message will show here when form is submitted -->
+        <div id="success-message" class="success-message" style="display: none;">
+            Your form will be submitted soon!
+        </div>
+
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="input-container">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-container">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <!-- Success message below the button -->
+            <div id="success-message" class="success-message" style="display: none; margin-top: 10px; color: #4caf50;">
+                Your form will be submitted soon!
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Handle form submission and show message
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            
+            // Display message that the form will be submitted
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';  // Show the success message
+
+            // Optionally, simulate a delay for a more realistic message display (e.g., before submitting)
+            setTimeout(function() {
+                // Submit the form programmatically after the message is shown
+                document.getElementById('contact-form').submit();  // This will submit the form
+            }, 2000);  // Delay of 2 seconds before form is submitted (change the time as needed)
+        });
+    </script>
+
+</body>
+</html>
