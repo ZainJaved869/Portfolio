@@ -27,13 +27,14 @@
             <h2>Contact Me</h2>
         </div>
 
-        <!-- Success message will show here when form is submitted -->
-        <div id="success-message" class="success-message" style="display: none;">
-            Your form will be submitted soon!
+        <!-- Success message -->
+        <div id="success-message" class="success-message" style="display: none; color: #4caf50; margin-top: 10px;">
+            ✅ Your message has been sent successfully!
         </div>
 
         <div class="contact-form">
-            <form id="contact-form">
+            <!-- Replace YOUR_EMAIL_HERE with your Formspree endpoint -->
+            <form id="contact-form" action="https://formspree.io/f/mwpnbprw" method="POST">
                 <div class="input-container">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
@@ -45,27 +46,31 @@
                 </div>
                 <button type="submit">Send Message</button>
             </form>
-            <!-- Success message below the button -->
-            <div id="success-message" class="success-message" style="display: none; margin-top: 10px; color: #4caf50;">
-                Your form will be submitted soon!
-            </div>
         </div>
     </section>
 
     <script>
-        // Handle form submission and show message
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent the default form submission
-            
-            // Display message that the form will be submitted
-            var successMessage = document.getElementById('success-message');
-            successMessage.style.display = 'block';  // Show the success message
+        // Show success message without leaving page
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const successMessage = document.getElementById('success-message');
 
-            // Optionally, simulate a delay for a more realistic message display (e.g., before submitting)
-            setTimeout(function() {
-                // Submit the form programmatically after the message is shown
-                document.getElementById('contact-form').submit();  // This will submit the form
-            }, 2000);  // Delay of 2 seconds before form is submitted (change the time as needed)
+            let formData = new FormData(form);
+            let response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                successMessage.style.display = 'block';
+                form.reset();
+            } else {
+                successMessage.style.display = 'block';
+                successMessage.innerText = "❌ Oops! Something went wrong.";
+                successMessage.style.color = "red";
+            }
         });
     </script>
 
