@@ -110,20 +110,12 @@ nav {
 
 
 .words {
-   /* Display words in a row */
-    gap: 10px; /* Adjust space between words */
-    opacity: 0; /* Initially hide the words */
-    transform: translateY(20px); /* Start the words a little below */
-    transition: opacity 0.6s linear, transform 0.6s linear; /* Apply transition to opacity and transform */
+ 
     color: #00bcd4;
 }
 
 
 
-/* Word elements */
-.word {
-    display: inline-block; /* Ensure words are displayed inline */
-}
 
 
 
@@ -245,6 +237,7 @@ p {
     margin-left: 0; /* Remove any left margin (optional, if needed) */
     padding-left: 0; /* Optional: remove any left padding */
 }
+
 
 
 
