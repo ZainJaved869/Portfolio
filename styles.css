@@ -109,19 +109,14 @@ nav {
 }
 
 .words {
-   /* Display words in a row */
-    gap: 10px; /* Adjust space between words */
-    opacity: 0; /* Initially hide the words */
 
+  display: inline-block;
     color: #00bcd4;
 }
 
 
 
-/* Word elements */
-.word {
-    display: inline-block; /* Ensure words are displayed inline */
-}
+
 
 
 
@@ -239,6 +234,7 @@ p {
     margin-left: 0; /* Remove any left margin (optional, if needed) */
     padding-left: 0; /* Optional: remove any left padding */
 }
+
 
 
 
