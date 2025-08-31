@@ -1,73 +1,73 @@
 /* Base Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1c1c1c, #282828);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1c1c1c, #282828);
 }
 
 
 
 /* Header */
 header {
-    background: rgb(24 67 81 / 90%);
-    padding: 0px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+  background: rgb(24 67 81 / 90%);
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Aligns vertically */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns vertically */
 }
 
 .navlist {
-    display: flex;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
 
 .navlist li {
-    margin: 0 15px; 
+  margin: 0 15px; 
 
-        margin: 0 15px; 
-       text-align: right;/* Applied position property */
-    }
-    
-    /* Add space between menu items */
+      margin: 0 15px; 
+     text-align: right;/* Applied position property */
+  }
+  
+  /* Add space between menu items */
 
 
 .navlist a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .navlist a:hover {
-    color: #00bcd4;
+  color: #00bcd4;
 }
 
 /* Home Section */
 .home {
-    min-height: 100vh;
-   
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  padding: 60px 12px;
+  min-height: 100vh;
+ 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+padding: 60px 12px;
 }
 
 .home-content {
-    max-width: 90%;
+  max-width: 90%;
 }
 
 /* Profile Image */
@@ -75,77 +75,61 @@ nav {
 /* Profile Image */
 /* Profile Image */
 .profile-image {
-    position: relative;
-    top: 220px;
-    left: 600px;
+  position: relative;
+  top: 220px;
+  left: 600px;
 }
 
 /* Image Styling with Morphing Animation */
 .profile-image img {
-    width: 140px; /* Adjust as needed */
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    animation: morphing 5s infinite alternate ease-in-out;
+  width: 140px; /* Adjust as needed */
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: morphing 5s infinite alternate ease-in-out;
 }
 
 /* Morphing Keyframes */
 @keyframes morphing {
-    0% {
-        border-radius: 50%;
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(3, 86, 97, 0.9);
-    }
-    50% {
-        border-radius: 40%;
-        transform: scale(1.1); /* Slight expansion */
-        box-shadow: 0 0 20px rgba(3, 90, 102, 0.9);
-    }
-    100% {
-        border-radius: 60%;
-        transform: scale(1); 
-        box-shadow: 0 0 15px rgba(3, 97, 109, 0.9);
-    }
+  0% {
+      border-radius: 50%;
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(3, 86, 97, 0.9);
+  }
+  50% {
+      border-radius: 40%;
+      transform: scale(1.1); /* Slight expansion */
+      box-shadow: 0 0 20px rgba(3, 90, 102, 0.9);
+  }
+  100% {
+      border-radius: 60%;
+      transform: scale(1); 
+      box-shadow: 0 0 15px rgba(3, 97, 109, 0.9);
+  }
 }
-
-
-.words {
- 
-background-color: #00bcd4; /* Cyan */
-color: #ffffff;           /* White */
-
-}
-
-
-
-
-
-
-
-
 
 
 
 
 /* Text Styling */
 h1 {
-    font-size: 30px;
-    color: #008ba3;
+  font-size: 30px;
+  color: #008ba3;
 }
 
 h3 {
-    font-size: 22px;
-    color: #fff;
+  font-size: 22px;
+  color: #fff;
 }
 h5{
-    font-size: medium;
-    color: #008ba3;
+  font-size: medium;
+  color: #008ba3;
 }
 p {
-    font-size: 18px;
+  font-size: 18px;
+
  
-   
-    color: #fff;
+  color: #fff;
 }
 
 
@@ -153,99 +137,102 @@ p {
 
 /* Social Icons */
 .social-icons {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .social-icons a {
-    margin: 0 8px;
- color:#fff;
-    font-size: 30px;
-    transition: color 0.3s ease;
+  margin: 0 8px;
+color:#fff;
+  font-size: 30px;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #00bcd4;
+  color: #00bcd4;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navlist {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(20, 20, 20, 0.9);
-        display: none;
-        padding: 10px 0;
-    }
+  .navlist {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: rgba(20, 20, 20, 0.9);
+      display: none;
+      padding: 10px 0;
+  }
 
- 
 
-    .profile-image img {
-        width: 100px;
-    }
 
-  
+  .profile-image img {
+      width: 100px;
+  }
 
-    .btn2 {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
+
+
+  .btn2 {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
 }
 
 @media (max-width: 480px) {
-    .profile-image img {
-        width: 80px;
-    }
+  .profile-image img {
+      width: 80px;
+  }
 
-    h1 {
-        font-size: 18px;
-      
-    }
+  h1 {
+      font-size: 18px;
+    
+  }
 
 
-    h3 {
-        font-size: 14px;
-    }
+  h3 {
+      font-size: 14px;
+  }
 
-    p {
-        font-size: 12px;
-    }
+  p {
+      font-size: 12px;
+  }
 
- 
 
-    .social-icons a {
-        font-size: 16px;
-    }
+
+  .social-icons a {
+      font-size: 16px;
+  }
 }
 
 .home-content {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align everything to the left */
-    text-align: left; /* Ensure text aligns left */
-    padding-left: 2px; /* Add some spacing from the left */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align everything to the left */
+  text-align: left; /* Ensure text aligns left */
+  padding-left: 2px; /* Add some spacing from the left */
 }
 
 
 /* Word container for the job titles */
+.words {
+ 
+  color: #00bcd4;
+}
+
+
+/* Word elements */
+.word {
+  display: inline-block; /* Ensure words are displayed inline */
+}
 
 
 
 /* Align the paragraph to the left */
 .left-align {
-    text-align: left; /* Align text to the left */
-    margin-left: 0; /* Remove any left margin (optional, if needed) */
-    padding-left: 0; /* Optional: remove any left padding */
+  text-align: left; /* Align text to the left */
+  margin-left: 0; /* Remove any left margin (optional, if needed) */
+  padding-left: 0; /* Optional: remove any left padding */
 }
-
-
-
-
-
-
-
 
 
 
