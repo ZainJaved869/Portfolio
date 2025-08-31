@@ -109,6 +109,25 @@ nav {
 }
 
 
+.words {
+   /* Display words in a row */
+    gap: 10px; /* Adjust space between words */
+    opacity: 0; /* Initially hide the words */
+    transform: translateY(20px); /* Start the words a little below */
+    transition: opacity 0.6s linear, transform 0.6s linear; /* Apply transition to opacity and transform */
+    color: #00bcd4;
+}
+
+/* On hover, the words become visible and move to original position */
+.words:hover {
+    opacity: 1; /* Words will fade in */
+    transform: translateY(0); /* Words will move to their final position */
+}
+
+/* Word elements */
+.word {
+    display: inline-block; /* Ensure words are displayed inline */
+}
 
 
 
