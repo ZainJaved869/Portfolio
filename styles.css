@@ -108,11 +108,7 @@ nav {
     }
 }
 
-.words {
 
-  display: inline-block;
-    color: #00bcd4;
-}
 
 
 
@@ -234,6 +230,7 @@ p {
     margin-left: 0; /* Remove any left margin (optional, if needed) */
     padding-left: 0; /* Optional: remove any left padding */
 }
+
 
 
 
