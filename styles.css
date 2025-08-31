@@ -118,11 +118,7 @@ nav {
     color: #00bcd4;
 }
 
-/* On hover, the words become visible and move to original position */
-.words:hover {
-    opacity: 1; /* Words will fade in */
-    transform: translateY(0); /* Words will move to their final position */
-}
+
 
 /* Word elements */
 .word {
@@ -249,6 +245,7 @@ p {
     margin-left: 0; /* Remove any left margin (optional, if needed) */
     padding-left: 0; /* Optional: remove any left padding */
 }
+
 
 
 
